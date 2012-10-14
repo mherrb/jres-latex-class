@@ -17,8 +17,7 @@
 \ProvidesClass{jres-resume}[2012/10/04 v1.0
  JRES resume document class]
 %
-\LoadClassWithOptions{article}
-%\PassOptionsToClass{12pt}{article}
+\LoadClass[12pt]{article}
 %
 % Polices...
 % XeTeX permet facilement de choisir Liberation Sans Narrow
