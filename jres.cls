@@ -156,7 +156,7 @@
   \endgroup}
 % Pas de small caps pour Figure ou Tableau
 \AtBeginDocument{\def\figurename{Figure}}
-\AtBeginDocument{\def\figurename{Tableau}}
+\AtBeginDocument{\def\tablename{Tableau}}
 %
 % Bibliographie
 \AtBeginDocument{\def\refname{Bibliographie}}
