@@ -137,11 +137,6 @@
 \RequirePackage{url}
 \urlstyle{same}
 \DeclareUrlCommand\url{\color{blue}}
-
-%
-% Bibliographie
-\AtBeginDocument{\def\refname{Bibliographie}}
-
 %
 % Figures
 \RequirePackage{graphicx}
@@ -161,6 +156,12 @@
   \endgroup}
 % Pas de small caps pour Figure
 \AtBeginDocument{\def\figurename{Figure}}
+\AtBeginDocument{\def\figurename{Tableau}}
+%
+% Bibliographie
+\AtBeginDocument{\def\refname{Bibliographie}}
+\bibliographystyle{jres}
+
 
 % TODO
 % Style narrow pour pdflatex (?)
