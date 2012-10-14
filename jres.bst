@@ -1,3 +1,5 @@
+%% Bib style "jres", Derive de unsrt-fr.bst
+%% The current maintainer of this work in Matthieu Herrb
 %%
 %% Bib. style "unsrt-fr" (version francisee de unsrt.bst)
 %%
@@ -12,7 +14,7 @@
  % and version 1.2 or later is part of all distributions of LaTeX
  % version 1999/12/01 or later.
  %
- % This program consists of the files unsrt-fr.bst
+ % This program consists of the files jres.bst
  %
 
 

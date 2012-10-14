@@ -12,7 +12,7 @@
 % 
 % The Current Maintainer of this work is Matthieu Herrb
 %
-% This work consists of the files jres.cls and paper.tex
+% This work consists of the files jres.cls and article.tex
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{jres}[2012/10/04 v1.0
  JRES document class]
@@ -154,7 +154,7 @@
     \normalsize
     \@makecaption{\csname fnum@#1\endcsname}{\ignorespaces \itshape #3}\par
   \endgroup}
-% Pas de small caps pour Figure
+% Pas de small caps pour Figure ou Tableau
 \AtBeginDocument{\def\figurename{Figure}}
 \AtBeginDocument{\def\figurename{Tableau}}
 %
