@@ -91,9 +91,14 @@
   \vskip 3mm%
   \par
 }
+
+% Redefinition de \date pour garder une valeur pour le footer
+\def\date#1{\gdef\@date{#1}\gdef\@jresdate{#1}}
+
 %
 \renewenvironment{abstract}{%
         \noindent
+        \thispagestyle{fancy}%
         \textbf{Résumé}\par\begin{itshape}}{\end{itshape}\par}
 \newcommand{\motscles}[1]{%
         \vskip 2ex
@@ -102,6 +107,21 @@
 
 \setlength{\parindent}{0cm}
 \setlength{\parskip}{1ex plus 0.5ex minus 0.2ex}
+
+%%%----------------------------------------------------------------------
+%%%
+%%% Les headers "speciaux" (necessite fancyheadings.sty)
+%%%
+\RequirePackage{fancyhdr}
+\RequirePackage{lastpage}
+
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\lfoot{\@jresdate}
+\cfoot{\thepage/\pageref{LastPage}}
+\rfoot{JRES 2013}
+\pagestyle{fancy}
+
 %
 % Configuration de listings
 \RequirePackage{color}
@@ -118,7 +138,30 @@
 \urlstyle{same}
 \DeclareUrlCommand\url{\color{blue}}
 
+%
+% Bibliographie
+\AtBeginDocument{\def\refname{Bibliographie}}
+
+%
+% Figures
+\RequirePackage{graphicx}
+
+% Titre en italique...
+\long\def\@caption#1[#2]#3{%
+  \par
+  \addcontentsline{\csname ext@#1\endcsname}{#1}%
+    {\protect\numberline{\csname the#1\endcsname}{\ignorespaces #2}}%
+  \begingroup
+    \@parboxrestore
+    \if@minipage
+      \@setminipage
+    \fi
+    \normalsize
+    \@makecaption{\csname fnum@#1\endcsname}{\ignorespaces \itshape #3}\par
+  \endgroup}
+% Pas de small caps pour Figure
+\AtBeginDocument{\def\figurename{Figure}}
+
 % TODO
-% Biblio
 % Style narrow pour pdflatex (?)
-% Pied de page
+
