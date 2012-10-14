@@ -12,7 +12,11 @@
 % 
 % The Current Maintainer of this work is Matthieu Herrb
 %
-% This work consists of the files jres.cls and paper.tex
+% This work consists of the files:
+% jres.cls
+% jres.bst
+% article.bib
+% article.tex
 
 \documentclass[11pt]{jres}
 
@@ -26,8 +30,7 @@
 2, rue du second auteur\\
 34\,000 Montpellier}
 
-\date{}
-
+\date{15/10/2013}
 
 \begin{document}
 \maketitle
@@ -76,7 +79,93 @@ de code source  est « lstlisting ». Voici un exemple :
 127.0.0.1  localhost.localdomain localhost
 \end{lstlisting}
 
+Les titres de section sont en 14 points gras, avec numérotation arabe.
+
+Les titres de sous-section sont en 12 points gras, avec numérotation arabe (avec rappel du numéro de section et séparation par un point).
+
+Les titres de niveau inférieurs sont à éviter, pour des raisons de lisibilité.
+
+Les notes de bas de page sont en 8 points\footnote{Comme ceci}. 
+
+\subsection{Typographie}
+
+Les auteurs s'attacheront, dans la mesure du possible, à respecter les
+règles typographiques françaises.
+
+En particulier, ils veilleront à utiliser des espaces insécables avant
+les ponctuations hautes (;:!?) et des guillemets français (« »).
+
+\subsection{Bibliographie}
+
+La bibliographie sera faite avec des numéros et dans l'ordre d'apparition dans le texte.
+
+\begin{enumerate}
+
+\item Pour les articles d'une revue, on indiquera obligatoirement les
+  auteurs, le titre de l'article, la revue, le numéro, le volume,
+  l'année et le mois. Voir \cite{exemple1}
+
+\item Pour les articles dans les actes d'un congrès, on mentionnera
+  obligatoirement les auteurs, le titre de l'article, le titre des
+  actes, l'année. Voir : \cite{exemple2} (le mois et le lieu sont
+  facultatifs mais conseillés)
+
+\item Pour les livres, on citera obligatoirement le ou les auteurs, le
+  titre, l'éditeur et l'année. Voir : \cite{exemple3} (il est conseillé de
+  rajouter le lieu d'édition)
+
+\end{enumerate}
+
+\subsection{Adresses électroniques}
+
+Pour diminuer les risques de moissonnage, aucune adresse mail ne
+figurera dans l'article.
+
+\section{Mise en page}
+
+\subsection{Nombre de pages}
+
+Le nombre de pages de l'article relatif à un poster doit être compris
+entre une et sept pages. Le poster lui même sera inséré avec cet
+article. Pour les démonstrations et les présentations courtes,
+l'article doit comprendre entre deux et huit pages. Pour les autres
+présentations, le nombre de pages d'un article doit être compris entre
+six et huit pages.
+
+\subsection{Marges}
+
+Les marges sont les suivantes :
+
+\begin{itemize}
+\item en haut : 2,5\ cm ;
+\item à gauche et à droite : 2\ cm ;
+\item en bas : 3\ cm.
+\end{itemize}
+
+Les pages doivent être numérotées. Le pied de page du modèle doit être
+maintenu.
+
+\subsection{Figures}
+
+Les figures sont de préférence insérées à proximité du texte qui y
+fait référence. Elles sont numérotées et suivies d'une légende
+explicite, en italique, non gras. Le texte fait référence à la 
+Figure~\ref{fig-exemple}.
+
+\begin{figure}
+\centerline{\includegraphics[width=7cm]{figure}}
+\caption{Un exemple de figure}
+\label{fig-exemple}
+\end{figure}
+
+
+\section*{Annexe}
+
+Les auteurs ajoutent, si nécessaire, une annexe avec une section non numérotée.
+
+% Bibiliographie
+\nocite{*}
+\bibliographystyle{jres}
+\bibliography{paper}
+
 \end{document}
-
-
-
