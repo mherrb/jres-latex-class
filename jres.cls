@@ -20,40 +20,46 @@
 \LoadClass{article}
 %
 % Polices...
-% XeTeX permet facilement de choisir Liberation Sans Narrow
+% XeTeX ou LuaTeX permettent facilement de choisir Liberation Sans Narrow
 % Donc on essaye de forcer la main à l'utilisateur pour qu'il l'utilise..
 %
 % D'abord il faut trouve ifxetex.sty ou l'emuler
 \newif\ifm@mifxetex
   \m@mifxetexfalse
-\IfFileExists{ifxetex.sty}{\RequirePackage{ifxetex}\relax}{%
-  \ClassWarningNoLine{memoir}{%
+\IfFileExists{ifxetex.sty}{\RequirePackage{ifxetex}}{%
+  \ClassWarningNoLine{jres}{%
     The `ifxetex' package is not installed.\MessageBreak
     The package is being emulated}%
 \expandafter\newif\csname ifxetex\endcsname
 \@ifundefined{XeTeXrevision}{\xetexfalse}{\xetextrue}
 \m@mifxetextrue%
-%%\EmulatedPackage{ifxetex}[2008/07/23]
 }
-\ifm@mifxetex%
-\def\RequireXeTeX{%
-  \ifxetex\else
-  \ClassError{jres}{XeTeX is required to process this document}%
-            {Try again with xelatex, not (pdf)latex.\MessageBreak
-             Or try removing any XeTeX package(s).}
-  \fi}
-\fi
+\newif\ifm@mifluatex
+  \m@mifluatexfalse
+\IfFileExists{ifluatex.sty}{\RequirePackage{ifluatex}}{%
+  \ClassWarningNoLine{jres}{%
+    The `ifluatex' pagckage is not installed.\MessageBreak
+    The package is being emulated}%
+\expandafter\newif\csname ifluatex\endcsname
+\@ifundefined{luatexversion}{\luatexfalse}{\luatextrue}
+\m@mifluatextrue%
+}
 % c'est parti pour la config 
 \ifxetex
   \RequirePackage{fontspec}
   \setmainfont[Mapping=tex-text]{Liberation Sans Narrow}
 \else
-  \ClassWarningNoLine{jres}{%
+  \ifluatex
+    \RequirePackage{fontspec}
+    \setmainfont{Liberation Sans Narrow}
+  \else
+    \ClassWarningNoLine{jres}{%
     Utilisez de préférence xelatex pour formatter le document}
-  \RequirePackage[utf8]{inputenc}
-  \RequirePackage[T1]{fontenc}
-  \RequirePackage{helvet}
-  \renewcommand{\familydefault}{\sfdefault}
+    \RequirePackage[utf8]{inputenc}
+    \RequirePackage[T1]{fontenc}
+    \RequirePackage{helvet}
+    \renewcommand{\familydefault}{\sfdefault}
+  \fi
 \fi
 %
 % Règles typographiques Françaises...
