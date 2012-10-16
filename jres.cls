@@ -129,7 +129,9 @@
 \RequirePackage{lastpage}
 
 \fancyhf{}
-\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\headrulewidth}{0.1pt}
+\renewcommand{\footrulewidth}{0.1pt}
+\chead{\title}
 \lfoot{\@jresdate}
 \cfoot{\thepage/\pageref{LastPage}}
 \rfoot{JRES 2013}
