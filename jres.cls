@@ -18,6 +18,7 @@
  JRES document class]
 %
 \LoadClass{article}
+\RequirePackage{color}
 %
 % Polices...
 % XeTeX ou LuaTeX permettent facilement de choisir Liberation Sans Narrow
@@ -64,6 +65,9 @@
     \RequirePackage{times}
   \fi
 \fi
+\definecolor{jresblue}{rgb}{0.,0.1,0.5}
+\RequirePackage{sectsty}
+\allsectionsfont{\sffamily\color{jresblue}}
 %
 % Règles typographiques Françaises...
 \RequirePackage[french]{babel}
@@ -87,7 +91,7 @@
   \newpage
   \begin{center}%
   \let \footnote \thanks
-    {\LARGE\bfseries \@title \par}%
+    {\LARGE\bfseries\sffamily\color{jresblue} \@title \par}%
   \end{center}
   \begin{flushleft}
     \vskip 10mm%
@@ -133,7 +137,6 @@
 
 %
 % Configuration de listings
-\RequirePackage{color}
 \RequirePackage{listings}
 \definecolor{grey80}{rgb}{.8,.8,.8}
 \lstset{backgroundcolor=\color{grey80}}
