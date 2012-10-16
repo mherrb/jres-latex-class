@@ -107,7 +107,7 @@
 
 % Redefinition de \date pour garder une valeur pour le footer
 \def\date#1{\gdef\@date{#1}\gdef\@jresdate{#1}}
-
+\def\title#1{\gdef\@title{#1}\gdef\@jrestitle{#1}}
 %
 \renewenvironment{abstract}{%
         \noindent
@@ -131,7 +131,7 @@
 \fancyhf{}
 \renewcommand{\headrulewidth}{0.1pt}
 \renewcommand{\footrulewidth}{0.1pt}
-\chead{\title}
+%\chead{\@jrestitle}
 \lfoot{\@jresdate}
 \cfoot{\thepage/\pageref{LastPage}}
 \rfoot{JRES 2013}
