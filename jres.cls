@@ -59,7 +59,7 @@
     \setmonofont{Liberation Mono}
   \else
     \ClassWarningNoLine{jres}{%
-    Utilisez de préférence xelatex pour formatter le document}
+    Utilisez de préférence xelatex ou lualatex pour formatter le document}
     \RequirePackage[utf8]{inputenc}
     \RequirePackage[T1]{fontenc}
     \RequirePackage{times}
