@@ -47,18 +47,21 @@
 % c'est parti pour la config 
 \ifxetex
   \RequirePackage{fontspec}
-  \setmainfont[Mapping=tex-text]{Liberation Sans Narrow}
+  \setmainfont[Mapping=tex-text]{Times New Roman}
+  \setsansfont[Mapping=tex-text]{Helvetica}
+  \setmonofont[Mapping=tex-text]{Courier New}
 \else
   \ifluatex
     \RequirePackage{fontspec}
-    \setmainfont{Liberation Sans Narrow}
+    \setmainfont{Times New Roman}
+     \setsansfont{Helvetica}
+     \setmonofont{Courier New}
   \else
     \ClassWarningNoLine{jres}{%
     Utilisez de préférence xelatex pour formatter le document}
     \RequirePackage[utf8]{inputenc}
     \RequirePackage[T1]{fontenc}
-    \RequirePackage{helvet}
-    \renewcommand{\familydefault}{\sfdefault}
+    \RequirePackage{times}
   \fi
 \fi
 %
@@ -105,11 +108,11 @@
 \renewenvironment{abstract}{%
         \noindent
         \thispagestyle{fancy}%
-        \textbf{Résumé}\par\begin{itshape}}{\end{itshape}\par}
+        {\sffamily\textbf{Résumé}}\par\begin{itshape}}{\end{itshape}\par}
 \newcommand{\motscles}[1]{%
         \vskip 2ex
         \noindent%
-        \textbf{Mots clefs}\par\begin{itshape}#1\end{itshape}}
+        {\sffamily\textbf{Mots clefs}}\par\begin{itshape}#1\end{itshape}}
 
 \setlength{\parindent}{0cm}
 \setlength{\parskip}{1ex plus 0.5ex minus 0.2ex}
