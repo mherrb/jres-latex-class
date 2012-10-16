@@ -47,11 +47,15 @@
 % c'est parti pour la config 
 \ifxetex
   \RequirePackage{fontspec}
-  \setmainfont[Mapping=tex-text]{Liberation Sans Narrow}
+  \setmainfont[Mapping=tex-text]{Liberation Serif}
+  \setsansfont[Mapping=tex-text]{Liberation Sans}
+  \setmonofont[Mapping=tex-text]{Liberation Mono}
 \else
   \ifluatex
     \RequirePackage{fontspec}
-    \setmainfont{Liberation Sans Narrow}
+    \setmainfont{Liberation Serif}
+    \setsansfont{Liberation Sans}
+    \setmonofont{Liberation Mono}
   \else
     \ClassWarningNoLine{jres}{%
     Utilisez de préférence xelatex pour formatter le document}
@@ -61,6 +65,8 @@
     \renewcommand{\familydefault}{\sfdefault}
   \fi
 \fi
+\RequirePackage{sectsty}
+\allsectionsfont{\sffamily\color{jresblue}}
 %
 % Règles typographiques Françaises...
 \RequirePackage[french]{babel}
@@ -83,7 +89,7 @@
   \newpage
   \begin{center}%
   \let \footnote \thanks
-    {\large\bfseries \@title \par}%
+    {\large\sffamily\bfseries \@title \par}%
   \end{center}
   \begin{flushleft}
     \vskip 5mm%
@@ -92,8 +98,7 @@
     {\noindent\normalsize \@nom\newline}%
     {\small \@affi \par}}
   \end{flushleft}%
-  \vskip 3mm%
-  \par
+  \vskip 1ex%
 }
 
 % Redefinition de \date pour garder une valeur pour le footer
@@ -103,10 +108,10 @@
 \renewenvironment{abstract}{%
         \noindent
         \thispagestyle{empty}%
-        \textbf{Résumé}\par}{\par}
+        {\sffamily\textbf{Résumé}}\par}{\par}
 \newcommand{\motscles}[1]{%
         \noindent%
-        \textbf{Mots clefs}\par#1}
+        {\sffamily\textbf{Mots clefs}}\par#1\vskip 1ex}
 
 \setlength{\parindent}{0cm}
 \setlength{\parskip}{1ex plus 0.5ex minus 0.2ex}
