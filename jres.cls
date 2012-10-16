@@ -75,7 +75,7 @@
 % Papier A4
 \setlength\paperheight{297mm}
 \setlength\paperwidth{210mm}
-\RequirePackage[top=2.5cm,bottom=3cm,left=2cm,right=2cm]{geometry}
+\RequirePackage[top=2.5cm,bottom=3cm,left=3cm,right=3cm]{geometry}
 %
 % liste des auteurs
 \RequirePackage{datatool}
