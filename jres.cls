@@ -48,15 +48,15 @@
 % c'est parti pour la config 
 \ifxetex
   \RequirePackage{fontspec}
-  \setmainfont[Mapping=tex-text]{Times New Roman}
-  \setsansfont[Mapping=tex-text]{Helvetica}
-  \setmonofont[Mapping=tex-text]{Courier New}
+  \setmainfont[Mapping=tex-text]{Liberation Serif}
+  \setsansfont[Mapping=tex-text]{Liberation Sans}
+  \setmonofont[Mapping=tex-text]{Liberation Mono}
 \else
   \ifluatex
     \RequirePackage{fontspec}
-    \setmainfont{Times New Roman}
-     \setsansfont{Helvetica}
-     \setmonofont{Courier New}
+    \setmainfont{Liberation Serif}
+    \setsansfont{Liberation Sans}
+    \setmonofont{Liberation Mono}
   \else
     \ClassWarningNoLine{jres}{%
     Utilisez de préférence xelatex pour formatter le document}
