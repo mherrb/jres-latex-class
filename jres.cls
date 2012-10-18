@@ -14,7 +14,7 @@
 %
 % This work consists of the files jres.cls and article.tex
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{jres}[2012/10/04 v1.0
+\ProvidesClass{jres}[2012/10/18 v1.0
  JRES document class]
 % Derive de la classe article
 \LoadClass{article}
@@ -167,8 +167,8 @@
 \lstset{backgroundcolor=\color{grey90}}
 \lstset{basicstyle=\small\ttfamily}
 \newenvironment{codesource}%
-	{\begin{lstlisting}}%
-	{\end{lstlisting}\vskip 1ex}
+        {\begin{lstlisting}}%
+        {\end{lstlisting}\vskip 1ex}
 %
 % style urls
 \RequirePackage{url}
