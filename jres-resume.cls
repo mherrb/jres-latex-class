@@ -114,8 +114,8 @@
 % Configuration de listings
 \RequirePackage{color}
 \RequirePackage{listings}
-\definecolor{grey80}{rgb}{.8,.8,.8}
-\lstset{backgroundcolor=\color{grey80}}
+\definecolor{grey90}{rgb}{.9,.9,.9}
+\lstset{backgroundcolor=\color{grey90}}
 \lstset{basicstyle=\small\ttfamily}
 \newenvironment{codesource}%
 	{\begin{lstlisting}}%
