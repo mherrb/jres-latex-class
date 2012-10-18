@@ -99,10 +99,6 @@
   \end{flushleft}%
   \vskip 1ex%
 }
-
-% Redefinition de \date pour garder une valeur pour le footer
-\def\date#1{\gdef\@date{#1}\gdef\@jresdate{#1}}
-
 %
 \renewenvironment{abstract}{%
         \noindent
@@ -132,7 +128,6 @@
 %
 % Figures
 \RequirePackage{graphicx}
-
 % Titre en italique...
 \long\def\@caption#1[#2]#3{%
   \par
@@ -150,7 +145,3 @@
 \AtBeginDocument{\def\figurename{Figure}}
 \AtBeginDocument{\def\tablename{Tableau}}
 %
-
-% TODO
-% Style narrow pour pdflatex (?)
-
