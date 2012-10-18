@@ -14,7 +14,7 @@
 %
 % This work consists of the files jres-resume.cls and resume.tex
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{jres-resume}[2012/10/04 v1.0
+\ProvidesClass{jres-resume}[2012/10/18 v1.0
  JRES resume document class]
 %
 \LoadClass[12pt]{article}
