@@ -66,7 +66,6 @@
   \fi
 \fi
 \RequirePackage{sectsty}
-\allsectionsfont{\sffamily\color{jresblue}}
 %
 % Règles typographiques Françaises...
 \RequirePackage[french]{babel}
