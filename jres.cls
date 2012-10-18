@@ -18,7 +18,15 @@
  JRES document class]
 % Derive de la classe article
 \LoadClass{article}
-\RequirePackage{color}
+%
+% Options
+\RequirePackage{kvoptions}
+\DeclareStringOption[2013]{year}
+\ProcessKeyvalOptions*
+%
+% Le nom de la conf
+\def\@jresconf{JRES~\jres@year}
+%
 %
 % Polices...
 % XeTeX ou LuaTeX permettent facilement de choisir les polices système
