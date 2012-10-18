@@ -1,4 +1,4 @@
-%% Copyright 2012 CNRS LAAS 
+%% Copyright 2012 CNRS LAAS
 %
 % This work may be distributed and/or modified under the
 % conditions of the LaTeX Project Public License, either version 1.3
@@ -9,22 +9,22 @@
 % version 2005/12/01 or later.
 %
 % This work has the LPPL maintenance status `maintained'.
-% 
+%
 % The Current Maintainer of this work is Matthieu Herrb
 %
 % This work consists of the files jres.cls and article.tex
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{jres}[2012/10/04 v1.0
  JRES document class]
-%
+% Derive de la classe article
 \LoadClass{article}
 \RequirePackage{color}
 %
 % Polices...
-% XeTeX ou LuaTeX permettent facilement de choisir Liberation Sans Narrow
+% XeTeX ou LuaTeX permettent facilement de choisir les polices système
 % Donc on essaye de forcer la main à l'utilisateur pour qu'il l'utilise..
 %
-% D'abord il faut trouve ifxetex.sty ou l'emuler
+% D'abord il faut trouve ifxetex.sty ou l'émuler
 \newif\ifm@mifxetex
   \m@mifxetexfalse
 \IfFileExists{ifxetex.sty}{\RequirePackage{ifxetex}}{%
@@ -45,8 +45,9 @@
 \@ifundefined{luatexversion}{\luatexfalse}{\luatextrue}
 \m@mifluatextrue%
 }
-% c'est parti pour la config 
+% configuration des fontes proprement dite
 \ifxetex
+  % avec xetex c'est le mieux, le mapping tex-text permet de faire les césures
   \RequirePackage{fontspec}
   \setmainfont[Mapping=tex-text]{Liberation Serif}
   \setsansfont[Mapping=tex-text]{Liberation Sans}
@@ -54,10 +55,12 @@
 \else
   \ifluatex
     \RequirePackage{fontspec}
+    % luatex ne supporte pas encore le mapping tex-text
     \setmainfont{Liberation Serif}
     \setsansfont{Liberation Sans}
     \setmonofont{Liberation Mono}
   \else
+    % si c'est pdflatex qui est utilisé, on revient aux paquets PSNFSS existants
     \ClassWarningNoLine{jres}{%
     Utilisez de préférence xelatex ou lualatex pour formatter le document}
     \RequirePackage[utf8]{inputenc}
@@ -65,6 +68,8 @@
     \RequirePackage{times}
   \fi
 \fi
+% Titres en sans-serif + couleur
+\RequirePackage{color}
 \definecolor{jresblue}{rgb}{0.,0.1,0.5}
 \RequirePackage{sectsty}
 \allsectionsfont{\sffamily\color{jresblue}}
@@ -120,11 +125,8 @@
 
 \setlength{\parindent}{0cm}
 \setlength{\parskip}{1ex plus 0.5ex minus 0.2ex}
-
-%%%----------------------------------------------------------------------
-%%%
-%%% Les headers "speciaux" (necessite fancyheadings.sty)
-%%%
+%
+% Les entêtes et pieds de page
 \RequirePackage{fancyhdr}
 \RequirePackage{lastpage}
 
@@ -136,7 +138,6 @@
 \cfoot{\thepage/\pageref{LastPage}}
 \rfoot{JRES 2013}
 \pagestyle{fancy}
-
 %
 % Configuration de listings
 \RequirePackage{listings}
@@ -155,7 +156,6 @@
 %
 % Figures
 \RequirePackage{graphicx}
-
 % Titre en italique...
 \long\def\@caption#1[#2]#3{%
   \par
@@ -169,15 +169,10 @@
     \normalsize
     \@makecaption{\csname fnum@#1\endcsname}{\ignorespaces \itshape #3}\par
   \endgroup}
-% Pas de small caps pour Figure ou Tableau
+% Pas de small caps pour les labels de Figure ou Tableau
 \AtBeginDocument{\def\figurename{Figure}}
 \AtBeginDocument{\def\tablename{Tableau}}
 %
 % Bibliographie
 \AtBeginDocument{\def\refname{Bibliographie}}
 \bibliographystyle{jres}
-
-
-% TODO
-% Style narrow pour pdflatex (?)
-
