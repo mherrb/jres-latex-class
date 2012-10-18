@@ -116,7 +116,6 @@
 %
 \renewenvironment{abstract}{%
         \noindent
-        \thispagestyle{fancy}%
         {\sffamily\textbf{Résumé}}\par\begin{itshape}}{\end{itshape}\par}
 \newcommand{\motscles}[1]{%
         \vskip 2ex
@@ -129,14 +128,23 @@
 % Les entêtes et pieds de page
 \RequirePackage{fancyhdr}
 \RequirePackage{lastpage}
-
+% pour la 1ere page
+\fancypagestyle{plain}{
+  \fancyhf{}
+  \renewcommand{\headrulewidth}{0pt}
+  \renewcommand{\footrulewidth}{0.1pt}
+  \lfoot{\@jresdate}
+  \cfoot{\thepage/\pageref{LastPage}}
+  \rfoot{\@jresconf}
+}
+% les autres pages
 \fancyhf{}
 \renewcommand{\headrulewidth}{0.1pt}
 \renewcommand{\footrulewidth}{0.1pt}
 %\chead{\@jrestitle}
 \lfoot{\@jresdate}
 \cfoot{\thepage/\pageref{LastPage}}
-\rfoot{JRES 2013}
+\rfoot{\@jresconf}
 \pagestyle{fancy}
 %
 % Configuration de listings
