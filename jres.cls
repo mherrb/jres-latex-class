@@ -83,7 +83,12 @@
 \allsectionsfont{\sffamily\color{jresblue}}
 %
 % Règles typographiques Françaises...
+\ifxetex
+  \RequirePackage{polyglossia}
+  \setdefaultlanguage{french}
+\else
 \RequirePackage[french]{babel}
+\fi
 %
 % Papier A4
 \setlength\paperheight{297mm}
