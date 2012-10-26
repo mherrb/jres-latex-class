@@ -168,6 +168,7 @@
 \definecolor{grey90}{rgb}{.9,.9,.9}
 \lstset{backgroundcolor=\color{grey90}}
 \lstset{basicstyle=\small\ttfamily}
+\lstset{frame=single,framesep=10pt,xleftmargin=10pt,xrightmargin=10pt}
 \newenvironment{codesource}%
         {\begin{lstlisting}}%
         {\end{lstlisting}\vskip 1ex}
