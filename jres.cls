@@ -78,7 +78,7 @@
 \fi
 % Titres en sans-serif + couleur
 \RequirePackage{color}
-\definecolor{jresblue}{rgb}{0.,0.1,0.5}
+\definecolor{jresblue}{rgb}{0.,0.2,0.375} % correspond a 0,32,96 du modele word
 \RequirePackage{sectsty}
 \allsectionsfont{\sffamily\color{jresblue}}
 %
