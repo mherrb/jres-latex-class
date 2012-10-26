@@ -175,7 +175,7 @@
 % style urls
 \RequirePackage{url}
 \urlstyle{same}
-\DeclareUrlCommand\url{\color{blue}}
+\DeclareUrlCommand\url{\color{jresblue}}
 %
 % Figures
 \RequirePackage{graphicx}
