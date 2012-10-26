@@ -80,7 +80,7 @@
 \RequirePackage{color}
 \definecolor{jresblue}{rgb}{0.,0.2,0.375} % correspond a 0,32,96 du modele word
 \RequirePackage{sectsty}
-\allsectionsfont{\sffamily\color{jresblue}}
+\allsectionsfont{\sffamily\scshape\color{jresblue}}
 %
 % Règles typographiques Françaises...
 \ifxetex
