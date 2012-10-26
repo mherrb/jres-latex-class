@@ -57,16 +57,16 @@
 \ifxetex
   % avec xetex c'est le mieux, le mapping tex-text permet de faire les césures
   \RequirePackage{fontspec}
-  \setmainfont[Mapping=tex-text]{Liberation Serif}
-  \setsansfont[Mapping=tex-text]{Liberation Sans}
-  \setmonofont[Mapping=tex-text]{Liberation Mono}
+  \setmainfont[Mapping=tex-text]{Times New Roman}
+  \setsansfont[Mapping=tex-text]{Arial}
+  \setmonofont[Mapping=tex-text]{Courier New}
 \else
   \ifluatex
     \RequirePackage{fontspec}
     % luatex ne supporte pas encore le mapping tex-text
-    \setmainfont{Liberation Serif}
-    \setsansfont{Liberation Sans}
-    \setmonofont{Liberation Mono}
+    \setmainfont{Times New Roman}
+    \setsansfont{Arial}
+    \setmonofont{Courier New}
   \else
     % si c'est pdflatex qui est utilisé, on revient aux paquets PSNFSS existants
     \ClassWarningNoLine{jres}{%
