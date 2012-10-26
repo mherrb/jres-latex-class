@@ -116,9 +116,9 @@
     \vskip 10mm%
     \DTLforeach{auteurs}{%
       \@nom=nom,\@affi=affiliation,\@adr=adresse}{%
-    {\noindent\large \@nom\par}%
-    {\normalsize \@affi \par}
-    {\normalsize \@adr\par}\vskip 3mm}
+    {\noindent\sffamily\scshape\large\color{jresblue} \@nom\\}%
+    {\normalsize\sffamily \@affi \\}
+    {\normalsize\sffamily \@adr\par}\vskip 3mm}
   \end{flushleft}%
   \vskip 3mm%
   \par
@@ -130,11 +130,11 @@
 %
 \renewenvironment{abstract}{%
         \noindent
-        {\sffamily\textbf{Résumé}}\par\begin{itshape}}{\end{itshape}\par}
+        {\sffamily\scshape\color{jresblue}\textbf{Résumé}}\par\begin{itshape}}{\end{itshape}\par}
 \newcommand{\motscles}[1]{%
         \vskip 2ex
         \noindent%
-        {\sffamily\textbf{Mots clefs}}\par\begin{itshape}#1\end{itshape}}
+        {\sffamily\scshape\color{jresblue}\textbf{Mots clefs}}\par\begin{itshape}#1\end{itshape}}
 
 \setlength{\parindent}{0cm}
 \setlength{\parskip}{1ex plus 0.5ex minus 0.2ex}
