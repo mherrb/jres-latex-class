@@ -117,8 +117,8 @@
     \DTLforeach{auteurs}{%
       \@nom=nom,\@affi=affiliation,\@adr=adresse}{%
     {\noindent\sffamily\scshape\large\color{jresblue} \@nom\\}%
-    {\normalsize\sffamily \@affi \\}
-    {\normalsize\sffamily \@adr\par}\vskip 3mm}
+    {\normalsize\itshape \@affi \\}
+    {\normalsize\itshape \@adr\par}\vskip 3mm}
   \end{flushleft}%
   \vskip 3mm%
   \par
