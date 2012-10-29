@@ -110,7 +110,7 @@
   \newpage
   \begin{center}%
   \let \footnote \thanks
-    {\LARGE\bfseries\sffamily\color{jresblue} \@title \par}%
+    {\LARGE\bfseries\sffamily\scshape\color{jresblue} \@title \par}%
   \end{center}
   \begin{flushleft}
     \vskip 10mm%
