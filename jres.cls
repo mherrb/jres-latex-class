@@ -148,22 +148,23 @@
   \fancyhf{}
   \renewcommand{\headrulewidth}{0pt}
   \renewcommand{\footrulewidth}{0.1pt}
-  \lfoot{\@jresdate}
-  \cfoot{\thepage/\pageref{LastPage}}
-  \rfoot{\@jresconf}
+  \lfoot{\itshape\color{grey37}\@jresdate}
+  \cfoot{\itshape\color{grey37}\thepage/\pageref{LastPage}}
+  \rfoot{\itshape\color{grey37}\@jresconf}
 }
 % les autres pages
 \fancyhf{}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0.1pt}
 %\chead{\@jrestitle}
-\lfoot{\@jresdate}
-\cfoot{\thepage/\pageref{LastPage}}
-\rfoot{\@jresconf}
+\lfoot{\itshape\color{grey37}\@jresdate}
+\cfoot{\itshape\color{grey37}\thepage/\pageref{LastPage}}
+\rfoot{\itshape\color{grey37}\@jresconf}
 \pagestyle{fancy}
 %
 % Configuration de listings
 \RequirePackage{listings}
+\definecolor{grey37}{rgb}{0.375,0.375,0.375}
 \definecolor{grey80}{rgb}{.8,.8,.8}
 \definecolor{grey90}{rgb}{.9,.9,.9}
 \lstset{backgroundcolor=\color{grey90}}
