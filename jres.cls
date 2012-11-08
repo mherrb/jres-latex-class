@@ -164,6 +164,14 @@
 \rfoot{\itshape\color{grey37}\@jresconf}
 \pagestyle{fancy}
 %
+% Listes a puces
+\def\blackbox{\vrule height .8ex width .6ex depth -.2ex}%
+\renewcommand{\labelitemi}{\blackbox}
+\renewcommand{\labelitemii}{\blackbox}
+%
+% Enumerations
+\renewcommand{\labelenumii}{\theenumii.}
+%
 % Configuration de listings
 \RequirePackage{listings}
 \definecolor{grey37}{rgb}{.375,.375,.375}
