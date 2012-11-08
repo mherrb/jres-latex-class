@@ -127,7 +127,7 @@
 % Redefinition de \date pour garder une valeur pour le footer
 \def\date#1{\gdef\@date{#1}\gdef\@jresdate{#1}}
 \def\title#1{\gdef\@title{#1}\gdef\@jrestitle{#1}}
-\date{Montpellier -- 10 au 13 D\'ecembre}
+\date{Montpellier -- D\'ec. 2013}
 %
 \renewenvironment{abstract}{%
         \noindent
