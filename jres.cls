@@ -17,7 +17,7 @@
 \ProvidesClass{jres}[2012/10/18 v1.0
  JRES document class]
 % Derive de la classe article
-\LoadClass[11pt]{article}
+\LoadClass{article}
 %
 % Options
 \RequirePackage{kvoptions}
