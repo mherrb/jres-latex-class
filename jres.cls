@@ -80,7 +80,7 @@
 \RequirePackage{color}
 \definecolor{jresblue}{rgb}{0.,0.2,0.375} % correspond a 0,32,96 du modele word
 \RequirePackage{sectsty}
-\allsectionsfont{\sffamily\scshape\color{jresblue}}
+\allsectionsfont{\sffamily\color{jresblue}}
 %
 % Règles typographiques Françaises...
 \ifxetex
@@ -110,15 +110,15 @@
   \newpage
   \begin{center}%
   \let \footnote \thanks
-    {\LARGE\bfseries\sffamily\scshape\color{jresblue} \@title \par}%
+    {\huge\bfseries\sffamily\color{jresblue} \@title \par}%
   \end{center}
   \begin{flushleft}
     \vskip 10mm%
     \DTLforeach{auteurs}{%
       \@nom=nom,\@affi=affiliation,\@adr=adresse}{%
-    {\noindent\sffamily\scshape\large\color{jresblue} \@nom\\}%
-    {\normalsize\itshape \@affi \\}
-    {\normalsize\itshape \@adr\par}\vskip 3mm}
+    {\noindent\sffamily\large\bfseries\color{jresblue} \@nom\\}%
+    {\normalsize \@affi \\}
+    {\normalsize \@adr\par}\vskip 3mm}
   \end{flushleft}%
   \vskip 3mm%
   \par
@@ -131,11 +131,12 @@
 %
 \renewenvironment{abstract}{%
         \noindent
-        {\sffamily\scshape\color{jresblue}\textbf{Résumé}}\par\begin{itshape}}{\end{itshape}\par}
+        {\sffamily\color{jresblue}\textbf{Résumé}}\par\begin{itshape}}{\end{itshape}\par}
+%
 \newcommand{\motscles}[1]{%
         \vskip 2ex
         \noindent%
-        {\sffamily\scshape\color{jresblue}\textbf{Mots clefs}}\par\begin{itshape}#1\end{itshape}}
+        {\sffamily\color{jresblue}\textbf{Mots clefs}}\par\begin{itshape}#1\end{itshape}}
 
 \setlength{\parindent}{0cm}
 \setlength{\parskip}{1ex plus 0.5ex minus 0.2ex}
