@@ -165,12 +165,12 @@
 %
 % Configuration de listings
 \RequirePackage{listings}
-\definecolor{grey37}{rgb}{0.375,0.375,0.375}
+\definecolor{grey37}{rgb}{.375,.375,.375}
 \definecolor{grey80}{rgb}{.8,.8,.8}
 \definecolor{grey90}{rgb}{.9,.9,.9}
 \lstset{backgroundcolor=\color{grey90}}
 \lstset{basicstyle=\small\ttfamily}
-\lstset{frame=single,framesep=10pt,xleftmargin=10pt,xrightmargin=10pt}
+\lstset{frame=single,framesep=1em,xleftmargin=1em,xrightmargin=1em}
 \newenvironment{codesource}%
         {\begin{lstlisting}}%
         {\end{lstlisting}\vskip 1ex}
