@@ -85,8 +85,9 @@
 \ifxetex
   \RequirePackage{polyglossia}
   \setdefaultlanguage{french}
+  \setotherlanguage{english}
 \else
-  \RequirePackage[french]{babel}
+  \RequirePackage[english,french]{babel}
   \frenchbsetup{StandardItemLabels=true, CompactItemize=false,
     ReduceListSpacing=true}
 \fi
