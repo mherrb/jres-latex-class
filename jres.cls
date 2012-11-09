@@ -26,6 +26,7 @@
 %
 % Le nom de la conf
 \def\@jresconf{JRES~\jres@year}
+\def\@jresville{Montpellier}
 %
 %
 % Polices...
@@ -124,10 +125,7 @@
   \par
 }
 
-% Redefinition de \date pour garder une valeur pour le footer
-\def\date#1{\gdef\@date{#1}\gdef\@jresdate{#1}}
-\def\title#1{\gdef\@title{#1}\gdef\@jrestitle{#1}}
-\date{Montpellier -- D\'ec. 2013}
+\date{}
 %
 \renewenvironment{abstract}{%
         \noindent
@@ -150,18 +148,17 @@
   \fancyhf{}
   \renewcommand{\headrulewidth}{0pt}
   \renewcommand{\footrulewidth}{0.1pt}
-  \lfoot{\itshape\color{grey37}\@jresdate}
+  \lfoot{\itshape\color{grey37}\@jresconf}
   \cfoot{\itshape\color{grey37}\thepage/\pageref{LastPage}}
-  \rfoot{\itshape\color{grey37}\@jresconf}
+  \rfoot{\itshape\color{grey37}\@jresville}
 }
 % les autres pages
 \fancyhf{}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0.1pt}
-%\chead{\@jrestitle}
-\lfoot{\itshape\color{grey37}\@jresdate}
+\lfoot{\itshape\color{grey37}\@jresconf}
 \cfoot{\itshape\color{grey37}\thepage/\pageref{LastPage}}
-\rfoot{\itshape\color{grey37}\@jresconf}
+\rfoot{\itshape\color{grey37}\@jresville}
 \pagestyle{fancy}
 %
 % Listes a puces
