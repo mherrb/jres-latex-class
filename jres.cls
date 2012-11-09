@@ -72,7 +72,7 @@
     % si c'est pdflatex qui est utilisé, on revient aux paquets PSNFSS existants
     \RequirePackage[utf8]{inputenc}
     \RequirePackage[T1]{fontenc}
-    \RequirePackage{times}
+    \RequirePackage{txfonts}
   \fi
 \fi
 % Titres en sans-serif + couleur
