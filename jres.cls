@@ -200,12 +200,25 @@
       \@setminipage
     \fi
     \normalsize
-    \@makecaption{\csname fnum@#1\endcsname}{\ignorespaces \itshape #3}\par
+    \@makecaption{\itshape\csname fnum@#1\endcsname}{\ignorespaces \itshape #3}\par
   \endgroup}
 % Pas de small caps pour les labels de Figure ou Tableau
-\AtBeginDocument{\def\figurename{Figure}}
-\AtBeginDocument{\def\tablename{Tableau}}
+\addto\captionsfrench{\def\figurename{Figure}}
+\addto\captionsfrench{\def\tablename{Tableau}}
+% la commande ci-dessous ne marche pas avec pdflatex
+% \addto\captionsfrench{\def\CaptionSeparator{:\space}}
+% donc redefinit \@makecaption pour imposer ' :' comme separateur
+\long\def\@makecaption#1#2{%
+  \vskip\abovecaptionskip
+  \sbox\@tempboxa{#1 : #2}%
+  \ifdim \wd\@tempboxa >\hsize
+    #1\,: #2\par
+  \else
+    \global \@minipagefalse
+    \hb@xt@\hsize{\hfil\box\@tempboxa\hfil}%
+  \fi
+  \vskip\belowcaptionskip}
 %
 % Bibliographie
-\AtBeginDocument{\def\refname{Bibliographie}}
+\addto\captionsfrench{\def\refname{Bibliographie}}
 \bibliographystyle{jres}
