@@ -43,8 +43,6 @@
 2, rue du second auteur\\
 34\,000 Montpellier}
 
-\date{15/10/2013}
-
 \begin{document}
 \maketitle
 
@@ -63,18 +61,15 @@ sont en 12 points, gras, sans empattement.
 \section{Introduction}
 
 Voici les instructions de présentation pour la rédaction d'un article
-pour les JRES.  
+pour les JRES en utilisant \LaTeX{}.
 
-% Si vous lisez ce document, c'est que LaTeX est utilisable aussi :)
-
-Il est recommandé d'utiliser prioritairement le
-traitement de texte OpenOffice.org Writer ou LibreOffice, et il est
-impératif d'utiliser le format Open Document Texte (.odt) pour
+Il est recommandé d'utiliser un moteur \LaTeX{} produisant directement
+du PDF (xelatex, luatex ou pdflatex) et il est
+impératif d'utiliser le format Portable Document Format (.pdf) pour
 soumettre un article au comité de programme. 
-La version d'OpenOffice doit être au moins 3.2.1.  
 
-Les auteurs doivent utiliser les modèles téléchargeables sur le site
-des JRES (\url{https://2011.jres.org/auteurs/modeles}).
+Les auteurs doivent utiliser la classe de document jres téléchargeable
+sur le site des JRES (\url{https://2013.jres.org/auteurs/modeles}).
 
 \section{Présentation générale}
 
@@ -85,7 +80,8 @@ courantes sont acceptées également.
 
 Le texte  normal est en 10 points.
 
-La police pour les extraits de fichiers de configuration ou de code source est \texttt{Courier New} en 8 points.
+La police pour les extraits de fichiers de configuration ou de code
+source est \texttt{Courier New} en 10 points.
 
 L'environnement pour les extraits de fichiers de configuration ou 
 de code source  est « lstlisting ». Voici un exemple :
@@ -118,7 +114,8 @@ les ponctuations hautes (;:!?) et des guillemets français (« »).
 \subsection{Bibliographie}
 
 La bibliographie sera faite avec des numéros et dans l'ordre
-d'apparition dans le texte.
+d'apparition dans le texte en utilisant style de bibliographie
+\emph{jres}.
 
 \begin{enumerate}
 
@@ -135,10 +132,6 @@ d'apparition dans le texte.
   titre, l'éditeur et l'année. Voir : \cite{exemple3} (il est conseillé de
   rajouter le lieu d'édition)
 
-\begin{enumerate}
-\item énumération de 2nd niveau
-\item pour voir
-\end{enumerate}
 \end{enumerate}
 
 \subsection{Adresses électroniques}
@@ -155,16 +148,16 @@ entre une et sept pages. Le poster lui même sera inséré avec cet
 article. Pour les démonstrations et les présentations courtes,
 l'article doit comprendre entre deux et huit pages. Pour les autres
 présentations, le nombre de pages d'un article doit être compris entre
-six et huit pages.
+six et dix pages.
 
 \subsection{Marges}
 
 Les marges sont les suivantes :
 
 \begin{itemize}
-\item en haut : 2,5\ cm ;
+\item en haut : 2\ cm ;
 \item à gauche et à droite : 2\ cm ;
-\item en bas : 3\ cm.
+\item en bas : 2\ cm.
 \begin{itemize}
 \item Liste à puce de 2nd niveau
 \item 2e élément
