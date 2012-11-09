@@ -86,7 +86,9 @@
   \RequirePackage{polyglossia}
   \setdefaultlanguage{french}
 \else
-\RequirePackage[french]{babel}
+  \RequirePackage[french]{babel}
+  \frenchbsetup{StandardItemLabels=true, CompactItemize=false,
+    ReduceListSpacing=true}
 \fi
 %
 % Papier A4
