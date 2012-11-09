@@ -135,7 +135,7 @@
         \vskip 2ex
         \noindent%
         {\sffamily\color{jresblue}\textbf{Mots clefs}}%
-        \par\begin{itshape}#1\end{itshape}\newpage}
+        \par\begin{itshape}#1\end{itshape}}
 
 \setlength{\parindent}{0cm}
 \setlength{\parskip}{1ex plus 0.5ex minus 0.2ex}
