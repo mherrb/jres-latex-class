@@ -13,6 +13,7 @@
 % The Current Maintainer of this work is Matthieu Herrb
 %
 % This work consists of the files jres.cls and article.tex
+%
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{jres}[2012/10/18 v1.0
  JRES document class]
@@ -25,7 +26,7 @@
 \ProcessKeyvalOptions*
 %
 % Le nom de la conf
-\def\@jresconf{JRES~\jres@year -- Montpellier}
+\def\@jresconf{JRES~\jres@year{} -- Montpellier}
 %
 %
 % Polices...
