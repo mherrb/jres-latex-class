@@ -71,7 +71,6 @@
     \setmonofont{Courier New}
   \else
     % si c'est pdflatex qui est utilisé, on revient aux paquets PSNFSS existants
-    \RequirePackage[utf8]{inputenc}
     \RequirePackage[T1]{fontenc}
     \RequirePackage{txfonts}
   \fi
@@ -134,7 +133,7 @@
 %
 \renewenvironment{abstract}{%
         \noindent
-        {\Large\sffamily\color{jresblue}\textbf{Résumé}}\par\begin{itshape}}{\end{itshape}\par}
+        {\Large\sffamily\color{jresblue}\textbf{R\'esum\'e}}\par\begin{itshape}}{\end{itshape}\par}
 %
 \newcommand{\motscles}[1]{%
         \vskip 2ex
