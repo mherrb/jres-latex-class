@@ -128,7 +128,7 @@
   \vskip 3mm%
   \par
 }
-
+% Date vide
 \date{}
 %
 \renewenvironment{abstract}{%
@@ -164,12 +164,10 @@
 \cfoot{}
 \rfoot{\itshape\color{grey37}\thepage/\pageref{LastPage}}
 \pagestyle{fancy}
-
+% filet gris egalement
 \def\footrule{{\if@fancyplain\let\footrulewidth\plainfootrulewidth\fi
     \vskip-\footruleskip\vskip-\footrulewidth
     \color{grey37}\hrule\@width\headwidth\@height\footrulewidth\vskip\footruleskip}}
-
-
 %
 % Listes a puces
 \def\blackbox{\vrule height .8ex width .6ex depth -.2ex}%
