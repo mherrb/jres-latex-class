@@ -23,10 +23,11 @@
 % Options
 \RequirePackage{kvoptions}
 \DeclareStringOption[2013]{year}
+\DeclareStringOption[Montpellier]{city}
 \ProcessKeyvalOptions*
 %
 % Le nom de la conf
-\def\@jresconf{JRES~\jres@year{} -- Montpellier}
+\def\@jresconf{JRES~\jres@year{} -- \jres@city}
 %
 %
 % Polices...
