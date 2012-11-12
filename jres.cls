@@ -132,12 +132,12 @@
 %
 \renewenvironment{abstract}{%
         \noindent
-        {\sffamily\color{jresblue}\textbf{Résumé}}\par\begin{itshape}}{\end{itshape}\par}
+        {\Large\sffamily\color{jresblue}\textbf{Résumé}}\par\begin{itshape}}{\end{itshape}\par}
 %
 \newcommand{\motscles}[1]{%
         \vskip 2ex
         \noindent%
-        {\sffamily\color{jresblue}\textbf{Mots clefs}}%
+        {\Large\sffamily\color{jresblue}\textbf{Mots clefs}}%
         \par\begin{itshape}#1\end{itshape}}
 
 \setlength{\parindent}{0cm}
