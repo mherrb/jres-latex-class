@@ -25,8 +25,7 @@
 \ProcessKeyvalOptions*
 %
 % Le nom de la conf
-\def\@jresconf{JRES~\jres@year}
-\def\@jresville{Montpellier}
+\def\@jresconf{JRES~\jres@year -- Montpellier}
 %
 %
 % Polices...
@@ -150,17 +149,23 @@
   \renewcommand{\headrulewidth}{0pt}
   \renewcommand{\footrulewidth}{0.1pt}
   \lfoot{\itshape\color{grey37}\@jresconf}
-  \cfoot{\itshape\color{grey37}\thepage/\pageref{LastPage}}
-  \rfoot{\itshape\color{grey37}\@jresville}
+  \cfoot{\itshape\color{grey37}}
+  \rfoot{\itshape\color{grey37}\thepage/\pageref{LastPage}}
 }
 % les autres pages
 \fancyhf{}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0.1pt}
 \lfoot{\itshape\color{grey37}\@jresconf}
-\cfoot{\itshape\color{grey37}\thepage/\pageref{LastPage}}
-\rfoot{\itshape\color{grey37}\@jresville}
+\cfoot{}
+\rfoot{\itshape\color{grey37}\thepage/\pageref{LastPage}}
 \pagestyle{fancy}
+
+\def\footrule{{\if@fancyplain\let\footrulewidth\plainfootrulewidth\fi
+    \vskip-\footruleskip\vskip-\footrulewidth
+    \color{grey37}\hrule\@width\headwidth\@height\footrulewidth\vskip\footruleskip}}
+
+
 %
 % Listes a puces
 \def\blackbox{\vrule height .8ex width .6ex depth -.2ex}%
