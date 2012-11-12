@@ -1,4 +1,4 @@
-%% Copyright 2012 CNRS LAAS
+%% Copyright 2012 Renater
 %
 % This work may be distributed and/or modified under the
 % conditions of the LaTeX Project Public License, either version 1.3
