@@ -80,6 +80,9 @@
 \RequirePackage{sectsty}
 \allsectionsfont{\sffamily\color{jresblue}}
 %
+% Interligne
+\RequirePackage{setspace}
+\setstretch{1.1}
 % Règles typographiques Françaises...
 \ifxetex
   \RequirePackage{polyglossia}
