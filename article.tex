@@ -21,11 +21,9 @@
 %
 % Suivre cet exemple au maximum. Règles générales:
 %
-% - le texte est saisi en UTF-8
 % - suivre les règles de saise de french/babel concernant les
 %   ponctuations doubles
-% - le paquet utilisé pour les figues externes est graphicx
-% - le style de bibliographie est imposé pas besoin de le re-définir.
+% - le style de bibliographie est imposé, pas besoin de le re-définir.
 %
 \documentclass{jres}
 
@@ -177,12 +175,13 @@ fait référence. Elles sont numérotées et suivies d'une légende
 explicite, en italique, non gras. Le texte fait référence à la
 Figure~\ref{fig-exemple}.
 
+Le paquet \texttt{graphicx} est utilisé pour inclure des images.
+
 \begin{figure}
-\centerline{\includegraphics[width=7cm]{figure}}
+\centerline{\includegraphics[height=4cm]{figure}}
 \caption{Un exemple de figure}
 \label{fig-exemple}
 \end{figure}
-
 
 \section*{Annexe}
 
