@@ -6,7 +6,7 @@
 
 CIBLES = article.pdf resume.pdf
 
-PDFLATEX = xelatex
+PDFLATEX = pdflatex
 
 all:	$(CIBLES)
 
