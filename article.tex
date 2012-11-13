@@ -25,6 +25,10 @@
 %   ponctuations doubles
 % - le style de bibliographie est imposé, pas besoin de le re-définir.
 %
+%----------------------------------------------------------------------
+% Utilisation de la classe de documents jres.
+% Les parametres city et year permettent de situer le lieu et l'année
+% (optionnels si la version à jour de la classe est utilisée
 \documentclass[city=Montpellier,year=2013]{jres}
 
 % si pdflatex est utilisé, spécifier le codage du fichier source
@@ -33,6 +37,7 @@
 \title{Titre de l'article JRES 2013}
 
 % Utiliser la commande \auteur pour definir la liste des auteurs.
+% Le 3e élément (adresse) peut être vide
 
 \auteur{Prénom Nom de l'auteur 1}{Laboratoire ou service...}{%
 1, rue de l'adresse\\
@@ -42,9 +47,15 @@
 2, rue du second auteur\\
 34\,000 Montpellier}
 
+% Pas besoin de \date{}.
+
+
 \begin{document}
+
+% produit le titre selon les infos ci-desses
 \maketitle
 
+% Résumé
 \begin{abstract}
 Ce document résume les instructions aux auteurs de la conférence JRES 2013.
 Il est téléchargeable sur le site des JRES : \url{http://www.jres.org}.
