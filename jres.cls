@@ -96,11 +96,8 @@
     ReduceListSpacing=true}
 \fi
 %
-% Papier A4
-\setlength\paperheight{297mm}
-\setlength\paperwidth{210mm}
-% Marges
-\RequirePackage[top=2cm,bottom=3cm,left=2cm,right=2cm]{geometry}
+% Papier A4 + Marges
+\RequirePackage[paper=a4paper,top=2cm,bottom=3cm,left=2cm,right=2cm]{geometry}
 %
 % liste des auteurs
 \RequirePackage{datatool}
