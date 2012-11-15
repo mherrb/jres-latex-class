@@ -71,6 +71,7 @@
     \setmonofont{Courier New}
   \else
     % si c'est pdflatex qui est utilisé, on revient aux paquets PSNFSS existants
+    \RequirePackage{amsmath}
     \RequirePackage[T1]{fontenc}
     \RequirePackage{txfonts}
   \fi
