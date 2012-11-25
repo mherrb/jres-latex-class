@@ -190,9 +190,13 @@
     {\end{lstlisting}\vskip 1ex}
 %
 % style urls
-\RequirePackage{url}
+\RequirePackage{hyperref}
 \urlstyle{same}
-\DeclareUrlCommand\url{\color{jresblue}}
+\hypersetup{colorlinks,
+  urlcolor=jresblue,
+  linkcolor=black,
+  filecolor=black,
+  citecolor=black}
 %
 % Figures
 \RequirePackage{graphicx}
