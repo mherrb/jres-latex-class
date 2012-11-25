@@ -19,6 +19,7 @@
  JRES document class]
 % Derive de la classe article
 \LoadClass{article}
+\RequirePackage{hyperref}
 %
 % Options
 \RequirePackage{kvoptions}
@@ -110,6 +111,7 @@
 }
 % Presentation titre
 \def\@maketitle{%
+  \hypersetup{pdftitle=\@title}
   \newpage
   \begin{center}%
   \let \footnote \thanks
@@ -190,7 +192,6 @@
     {\end{lstlisting}\vskip 1ex}
 %
 % style urls
-\RequirePackage{hyperref}
 \urlstyle{same}
 \hypersetup{colorlinks,
   urlcolor=jresblue,
