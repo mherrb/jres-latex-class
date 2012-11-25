@@ -130,15 +130,17 @@
 \date{}
 %
 \renewenvironment{abstract}{%
-        \noindent
-        {\Large\sffamily\color{jresblue}\textbf{R\'esum\'e}}\par\begin{itshape}}{\end{itshape}\par}
+  \noindent
+  {\Large\sffamily\color{jresblue}\textbf{R\'esum\'e}}\par\begin{itshape}}%
+  {\end{itshape}\par}
 %
 \newcommand{\motscles}[1]{%
-        \vskip 2ex
-        \noindent%
-        {\Large\sffamily\color{jresblue}\textbf{Mots clefs}}%
-        \par\begin{itshape}#1\end{itshape}}
-
+  \vskip 2ex
+  \noindent%
+  {\Large\sffamily\color{jresblue}\textbf{Mots clefs}}%
+  \par\begin{itshape}#1\end{itshape}}
+%
+% Format paragraphe
 \setlength{\parindent}{0cm}
 \setlength{\parskip}{1ex plus 0.5ex minus 0.2ex}
 %
@@ -184,8 +186,8 @@
 \lstset{basicstyle=\small\ttfamily}
 \lstset{frame=single,framesep=1em,xleftmargin=1em,xrightmargin=1em}
 \newenvironment{codesource}%
-        {\begin{lstlisting}}%
-        {\end{lstlisting}\vskip 1ex}
+    {\begin{lstlisting}}%
+    {\end{lstlisting}\vskip 1ex}
 %
 % style urls
 \RequirePackage{url}
