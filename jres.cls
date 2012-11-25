@@ -177,9 +177,9 @@
 %
 % Configuration de listings
 \RequirePackage{listings}
-\definecolor{grey37}{rgb}{.375,.375,.375}
-\definecolor{grey80}{rgb}{.8,.8,.8}
-\definecolor{grey90}{rgb}{.9,.9,.9}
+\definecolor{grey37}{gray}{.375}
+\definecolor{grey80}{gray}{.8}
+\definecolor{grey90}{gray}{.9}
 \lstset{backgroundcolor=\color{grey90}}
 \lstset{basicstyle=\small\ttfamily}
 \lstset{frame=single,framesep=1em,xleftmargin=1em,xrightmargin=1em}
