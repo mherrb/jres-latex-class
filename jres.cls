@@ -15,7 +15,7 @@
 % This work consists of the files jres.cls and article.tex
 %
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{jres}[2012/11/12 v1.1
+\ProvidesClass{jres}[2012/11/25 v1.2
  JRES document class]
 % Derive de la classe article
 \LoadClass{article}
