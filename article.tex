@@ -31,24 +31,25 @@
 % (optionnels si la version à jour de la classe est utilisée
 \documentclass[city=Montpellier,year=2013]{jres}
 
-% si pdflatex est utilisé, spécifier le codage du fichier source
-\usepackage[utf8x]{inputenc}
+    % si pdflatex est utilisé, spécifier le codage du fichier source
+    \usepackage[utf8x]{inputenc}
 
-\title{Titre de l'article JRES 2013}
+    \title{Titre de l'article JRES 2013}
 
-% Utiliser la commande \auteur pour definir la liste des auteurs.
-% Le 3e élément (adresse) peut être vide
+    % Utiliser la commande \auteur pour definir la liste des auteurs.
+    % Le 3e élément (adresse) peut être vide
 
-\auteur{Prénom Nom de l'auteur 1}{Laboratoire ou service...}{%
-1, rue de l'adresse\\
-34\,000 Montpellier}
+    \auteur{Prénom Nom de l'auteur 1}
+	{Laboratoire ou service...}{%
+	    1, rue de l'adresse\\
+	    34\,000 Montpellier}
 
-\auteur{Prénom Nom de l'auteur 2}{Laboratoire ou service}{%
-2, rue du second auteur\\
-34\,000 Montpellier}
+    \auteur{Prénom Nom de l'auteur 2}
+	{Laboratoire ou service}{%
+	    2, rue du second auteur\\
+	    34\,000 Montpellier}
 
-% Pas besoin de \date{}.
-
+    % Pas besoin de \date{}.
 
 \begin{document}
 
@@ -66,7 +67,7 @@ Le titre « Résumé » (ainsi que le titre « Mots-clefs » ci-dessous)
 sont en 14 points, gras, sans empattement.
 \end{abstract}
 
-\motscles{IPv6, PKI, CMS …}
+\motscles{IPv6, PKI, CMS...}
 
 \section{Introduction}
 
@@ -74,11 +75,11 @@ Voici les instructions de présentation pour la rédaction d'un article
 pour les JRES en utilisant \LaTeX{}.
 
 Il est recommandé d'utiliser un moteur \LaTeX{} produisant directement
-du PDF (pdflatex, xelatex ou luatex) et il est
-impératif d'utiliser le format Portable Document Format (.pdf) pour
+du PDF (\texttt {pdflatex}, \texttt {xelatex} ou \texttt {luatex}) et il est
+impératif d'utiliser le format « Portable Document Format » (.pdf) pour
 soumettre un article au comité de programme.
 
-Les auteurs doivent utiliser la classe de document jres téléchargeable
+Les auteurs doivent utiliser la classe de document « jres » téléchargeable
 sur le site des JRES (\url{https://2013.jres.org/auteurs/modeles}).
 
 \section{Présentation générale}
@@ -86,8 +87,8 @@ sur le site des JRES (\url{https://2013.jres.org/auteurs/modeles}).
 \subsection{Structuration et polices}
 
 La police de base est de type \emph{Times} pour le corps du texte, et
-\textsf{Helvetica} pour les titres. Les alternatives les plus
-courantes sont acceptées également. Le texte  normal est en 10 points.
+\textsf{Helvetica} pour les titres.
+Le texte  normal est en 10 points.
 
 La police pour les extraits de fichiers de configuration ou de code
 source est \texttt{Courier} en 10 points.
@@ -101,15 +102,14 @@ de code source  est « lstlisting ». Voici un exemple :
 \end{lstlisting}
 
 Les titres de section sont en 14 points gras sans empattement
-(Helvetica, Arial ou équivalent), avec numérotation arabe.
+(Helvetica ou Arial), avec numérotation arabe.
 
 Les titres de sous-section sont en 12 points gras sans empattement,
 avec numérotation arabe (avec rappel du numéro de section et
 séparation par un point).
 Les titres de niveau inférieurs sont à éviter, pour des raisons de
 lisibilité.
-
-Les titres de sont en couleur bleue sombre RGB (0.,0.2,0.375).  
+Les titres sont en couleur bleue sombre (valeurs RGB : 0.,0.2,0.375).  
 
 Les notes de bas de page sont en 8 points\footnote{Comme ceci}.
 
@@ -122,29 +122,28 @@ En particulier, ils veilleront à utiliser des espaces insécables avant
 les ponctuations hautes (;:!?) et des guillemets français (« »).
 
 Il est suggéré aux auteurs de lire les leçons de
-typographie\footnote{\url{http://jacques-andre.fr/faqtypo/lessons.pdf}}
-de Jacques André.
+typographie \cite{andre1990} de Jacques André.
 
 \subsection{Bibliographie}
 
 La bibliographie sera faite avec des numéros et dans l'ordre
-d'apparition dans le texte en utilisant style de bibliographie
-\emph{jres}.
+d'apparition dans le texte en utilisant le style de bibliographie
+\emph{jres} (voir fichier « article.bib »).
 
 \begin{enumerate}
 
-\item Pour les articles d'une revue, on indiquera obligatoirement les
-  auteurs, le titre de l'article, la revue, le numéro, le volume,
-  l'année et le mois. Voir \cite{exemple1}
+    \item Pour les articles d'une revue, on indiquera obligatoirement les
+      auteurs, le titre de l'article, la revue, le numéro, le volume,
+      l'année et le mois. Voir \cite{exemple1}
 
-\item Pour les articles dans les actes d'un congrès, on mentionnera
-  obligatoirement les auteurs, le titre de l'article, le titre des
-  actes, l'année. Voir : \cite{exemple2} (le mois et le lieu sont
-  facultatifs mais conseillés)
+    \item Pour les articles dans les actes d'un congrès, on mentionnera
+      obligatoirement les auteurs, le titre de l'article, le titre des
+      actes, l'année. Voir \cite{exemple2} (le mois et le lieu sont
+      facultatifs mais conseillés)
 
-\item Pour les livres, on citera obligatoirement le ou les auteurs, le
-  titre, l'éditeur et l'année. Voir : \cite{exemple3} (il est conseillé de
-  rajouter le lieu d'édition)
+    \item Pour les livres, on citera obligatoirement le ou les auteurs, le
+      titre, l'éditeur et l'année. Voir \cite{exemple3} (il est conseillé de
+      rajouter le lieu d'édition)
 
 \end{enumerate}
 
@@ -153,7 +152,8 @@ d'apparition dans le texte en utilisant style de bibliographie
 Pour diminuer les risques de moissonnage, aucune adresse mail ne
 figurera dans l'article. 
 
-Pour les références à des pages web la macro
+Pour les références à des pages web (sauf s'il s'agit d'une référence
+auquel cas elles doivent être placées dans la bibliographie), la macro
 \verb|\url| sera utilisée, par exemple comme ceci : \url{http://2013.jres.org/}
 
 \section{Mise en page}
@@ -171,13 +171,13 @@ de l'article doit être comprise entre six et huit pages.
 Les marges sont les suivantes :
 
 \begin{itemize}
-\item en haut : 2\ cm ;
-\item à gauche et à droite : 2\ cm ;
-\item en bas : 2\ cm.
-\begin{itemize}
-\item Liste à puce de 2nd niveau
-\item 2e élément
-\end{itemize}
+    \item en haut : 2\ cm ;
+    \item à gauche et à droite : 2\ cm ;
+    \item en bas : 2\ cm.
+	\begin{itemize}
+	    \item Liste à puce de second niveau
+	    \item 2e élément
+	\end{itemize}
 \end{itemize}
 
 Les pages doivent être numérotées. Le pied de page du modèle doit être
@@ -188,15 +188,18 @@ maintenu.
 Les figures sont de préférence insérées à proximité du texte qui y
 fait référence. Elles sont numérotées et suivies d'une légende
 explicite, en italique, non gras. Le texte fait référence à la
-Figure~\ref{fig-exemple}.
+figure~\ref{fig-exemple}.
 
 Le paquet \texttt{graphicx} est utilisé pour inclure des images.
 
 \begin{figure}
-\centerline{\includegraphics[height=4cm]{figure}}
-\caption{Un exemple de figure}
-\label{fig-exemple}
+    \centerline{\includegraphics[height=4cm]{figure}}
+    \caption{Un exemple de figure}
+    \label{fig-exemple}
 \end{figure}
+
+En cas d'insertion de figure contenant des couleurs, il est souhaitable
+d'en assurer la lisibilité sur une imprimante noir et blanc.
 
 \section*{Annexe}
 
