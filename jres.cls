@@ -28,7 +28,7 @@
 \ProcessKeyvalOptions*
 %
 % Le nom de la conf
-\def\@jresconf{JRES~\jres@year{} -- \jres@city}
+\def\@jresconf{JRES~\jres@year{} - \jres@city}
 %
 %
 % Polices...
