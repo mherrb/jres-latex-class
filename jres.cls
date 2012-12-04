@@ -164,7 +164,7 @@
 \renewcommand{\footrulewidth}{0.1pt}
 \lfoot{\itshape\color{grey37}\@jresconf}
 \cfoot{}
-\rfoot{\itshape\color{grey37}\thepage/\pageref{LastPage}}
+\rfoot{\itshape\color{grey37}\thepage/\pageref*{LastPage}}
 \pagestyle{fancy}
 % filet gris egalement
 \def\footrule{{\if@fancyplain\let\footrulewidth\plainfootrulewidth\fi
