@@ -235,7 +235,6 @@
 \newenvironment{jresbibliography}[1]
      {\section*{\refname}%
       \@mkboth{\MakeUppercase\refname}{\MakeUppercase\refname}%
-      \hypersetup{urlcolor=black}
       \list{\@biblabel{\@arabic\c@enumiv}}%
            {\settowidth\labelwidth{\@biblabel{#1}}%
              \labelsep1.5em
