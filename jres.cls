@@ -218,13 +218,13 @@
 \addto\captionsfrench{\def\figurename{Figure}}
 \addto\captionsfrench{\def\tablename{Tableau}}
 % la commande ci-dessous ne marche pas avec pdflatex
-% \addto\captionsfrench{\def\CaptionSeparator{:\space}}
-% donc redefinit \@makecaption pour imposer ' :' comme separateur
+% \addto\captionsfrench{\def\CaptionSeparator{-}}
+% donc redefinit \@makecaption pour imposer '-' comme separateur
 \long\def\@makecaption#1#2{%
   \vskip\abovecaptionskip
-  \sbox\@tempboxa{#1 : #2}%
+  \sbox\@tempboxa{#1 - #2}%
   \ifdim \wd\@tempboxa >\hsize
-    #1\,: #2\par
+    #1\space{}- #2\par
   \else
     \global \@minipagefalse
     \hb@xt@\hsize{\hfil\box\@tempboxa\hfil}%
