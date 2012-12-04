@@ -144,7 +144,7 @@
 %
 % Format paragraphe
 \setlength{\parindent}{0cm}
-\setlength{\parskip}{1ex plus 0.5ex minus 0.2ex}
+\setlength{\parskip}{0.7ex plus 0.5ex minus 0.2ex}
 %
 % Les entêtes et pieds de page
 \RequirePackage{fancyhdr}
