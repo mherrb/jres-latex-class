@@ -172,9 +172,9 @@
     \color{grey37}\hrule\@width\headwidth\@height\footrulewidth\vskip\footruleskip}}
 %
 % Listes a puces
-\def\blackbox{\vrule height .8ex width .6ex depth -.2ex}%
-\renewcommand{\labelitemi}{\blackbox}
-\renewcommand{\labelitemii}{\blackbox}
+\def\blackbox{\vrule height .95ex width .7ex depth -.25ex}%
+\renewcommand{\labelitemi}{\blackbox\hspace{6pt}}
+\renewcommand{\labelitemii}{\blackbox\hspace{4pt}}
 %
 % Enumerations
 \renewcommand{\labelenumii}{\theenumii.}
@@ -232,5 +232,26 @@
   \vskip\belowcaptionskip}
 %
 % Bibliographie
+\newenvironment{jresbibliography}[1]
+     {\section*{\refname}%
+      \@mkboth{\MakeUppercase\refname}{\MakeUppercase\refname}%
+      \hypersetup{urlcolor=black}
+      \list{\@biblabel{\@arabic\c@enumiv}}%
+           {\settowidth\labelwidth{\@biblabel{#1}}%
+             \labelsep1.5em
+            \leftmargin\labelwidth
+            \advance\leftmargin\labelsep
+            \@openbib@code
+            \usecounter{enumiv}%
+            \let\p@enumiv\@empty
+            \renewcommand\theenumiv{\@arabic\c@enumiv}}%
+      \sloppy
+      \clubpenalty4000
+      \@clubpenalty \clubpenalty
+      \widowpenalty4000%
+      \sfcode`\.\@m}
+     {\def\@noitemerr
+       {\@latex@warning{Empty `thebibliography' environment}}%
+      \endlist}
 \addto\captionsfrench{\def\refname{Bibliographie}}
 \bibliographystyle{jres}

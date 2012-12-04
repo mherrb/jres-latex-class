@@ -1030,7 +1030,7 @@ FUNCTION {begin.bib}
     'skip$
     { preamble$ write$ newline$ }
   if$
-  "\begin{thebibliography}{"  longest.label  * "}" * write$ newline$
+  "\begin{jresbibliography}{"  longest.label  * "}" * write$ newline$
   "\makeatletter" write$ newline$ 
   "\ifx\fonteauteurs\@undefined" write$ newline$
   "\def\fonteauteurs{" fr.auteurs.style * "}\fi" * write$ newline$ 
@@ -1045,7 +1045,7 @@ ITERATE {call.type$}
 
 FUNCTION {end.bib}
 { newline$
-  "\end{thebibliography}" write$ newline$
+  "\end{jresbibliography}" write$ newline$
 }
 
 EXECUTE {end.bib}
