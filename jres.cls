@@ -118,26 +118,26 @@
     {\huge\bfseries\sffamily\color{jresblue} \@title \par}%
   \end{center}
   \begin{flushleft}
-    \vskip 10mm%
+    \vskip 8mm%
     \DTLforeach{auteurs}{%
       \@nom=nom,\@affi=affiliation,\@adr=adresse}{%
+    \vskip 3mm
     {\noindent\sffamily\large\bfseries\color{jresblue} \@nom\\}%
     {\normalsize \@affi \\}
-    {\normalsize \@adr\par}\vskip 3mm}
+    {\normalsize \@adr}\\}
   \end{flushleft}%
-  \vskip 3mm%
-  \par
 }
 % Date vide
 \date{}
 %
 \renewenvironment{abstract}{%
+  \vskip 10pt
   \noindent
   {\Large\sffamily\color{jresblue}\textbf{R\'esum\'e}}\par\begin{itshape}}%
   {\end{itshape}\par}
 %
 \newcommand{\motscles}[1]{%
-  \vskip 2ex
+  \vskip 18pt
   \noindent%
   {\Large\sffamily\color{jresblue}\textbf{Mots clefs}}%
   \par\begin{itshape}#1\end{itshape}}
