@@ -124,7 +124,7 @@
     \vskip 3mm
     {\noindent\sffamily\large\bfseries\color{jresblue} \@nom\\}%
     {\normalsize \@affi \\}
-    {\normalsize \@adr}\\}
+    {\normalsize \@adr}\par}
   \end{flushleft}%
 }
 % Date vide
