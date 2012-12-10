@@ -156,7 +156,7 @@
   \renewcommand{\footrulewidth}{0.1pt}
   \lfoot{\itshape\color{grey37}\@jresconf}
   \cfoot{\itshape\color{grey37}}
-  \rfoot{\itshape\color{grey37}\thepage/\pageref{LastPage}}
+  \rfoot{\itshape\color{grey37}\thepage/\pageref*{LastPage}}
 }
 % les autres pages
 \fancyhf{}
