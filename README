@@ -1,6 +1,6 @@
-Classe de document LaTeX pour articles JRES.
-Conforme au style des instructions aux auteurs pour JRES 2013.
+Ce répertoire contient le style "jres" pour LaTeX.
 
-Cette classe est maintenant maintenue sur SourceSup:
-
-https://sourcesup.renater.fr/projects/jres/
+Copier les fichiers jres.cls et jres.bst dans un répertoire où LaTeX
+(resp. BiBTeX) saura les trouver. Suivre les instructions du fichier
+article.tex pour la rédaction de votre article.
+Le fichier Makefile peut aussi vous aider.
