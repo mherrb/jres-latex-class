@@ -35,7 +35,7 @@
 % XeTeX ou LuaTeX permettent facilement de choisir les polices système
 % Donc on essaye de forcer la main à l'utilisateur pour qu'il l'utilise..
 %
-% D'abord il faut trouve ifxetex.sty ou l'émuler
+% D'abord il faut trouver ifxetex.sty ou l'émuler
 \newif\ifm@mifxetex
   \m@mifxetexfalse
 \IfFileExists{ifxetex.sty}{\RequirePackage{ifxetex}}{%
@@ -56,7 +56,7 @@
 \@ifundefined{luatexversion}{\luatexfalse}{\luatextrue}
 \m@mifluatextrue%
 }
-% configuration des fontes proprement dite
+% configuration des fontes proprement dites
 \ifxetex
   % avec xetex c'est le mieux, le mapping tex-text permet de faire les césures
   \RequirePackage{fontspec}
@@ -79,7 +79,7 @@
 \fi
 % Titres en sans-serif + couleur
 \RequirePackage{xcolor}
-\definecolor{jresblue}{rgb}{0.,0.2,0.375} % correspond a 0,32,96 du modele word
+\definecolor{jresblue}{rgb}{0.,0.2,0.375} % correspond à 0,32,96 du modèle word
 \RequirePackage{sectsty}
 \allsectionsfont{\sffamily\color{jresblue}}
 %
@@ -109,7 +109,7 @@
 \DTLnewdbentry{auteurs}{affiliation}{#2}%
 \DTLnewdbentry{auteurs}{adresse}{#3}%
 }
-% Presentation titre
+% Présentation du titre
 \def\@maketitle{%
   \hypersetup{pdftitle=\@title}
   \newpage
@@ -166,7 +166,7 @@
 \cfoot{}
 \rfoot{\itshape\color{grey37}\thepage/\pageref*{LastPage}}
 \pagestyle{fancy}
-% filet gris egalement
+% filet gris également
 \def\footrule{{\if@fancyplain\let\footrulewidth\plainfootrulewidth\fi
     \vskip-\footruleskip\vskip-\footrulewidth
     \color{grey37}\hrule\@width\headwidth\@height\footrulewidth\vskip\footruleskip}}
@@ -232,6 +232,8 @@
   \vskip\belowcaptionskip}
 %
 % Bibliographie
+% redéfinition de l'environnement pour ajouter un \labelsep de 1.5em pour être
+% cohérent avec le modèle de présentation ISO de la biblio de Word.
 \newenvironment{jresbibliography}[1]
      {\section*{\refname}%
       \@mkboth{\MakeUppercase\refname}{\MakeUppercase\refname}%
