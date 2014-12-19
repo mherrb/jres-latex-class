@@ -28,13 +28,13 @@
 %----------------------------------------------------------------------
 % Utilisation de la classe de documents jres.
 % Les parametres city et year permettent de situer le lieu et l'année
-% (optionnels si la version à jour de la classe est utilisée
-\documentclass[city=Montpellier,year=2013]{jres}
+% (optionnels si la version à jour de la classe est utilisée)
+\documentclass[city=Montpellier,year=2015]{jres}
 
     % si pdflatex est utilisé, spécifier le codage du fichier source
     \usepackage[utf8x]{inputenc}
 
-    \title{Titre de l'article JRES 2013}
+    \title{Titre de l'article JRES 2015}
 
     % Utiliser la commande \auteur pour definir la liste des auteurs.
     % Le 3e élément (adresse) peut être vide
@@ -58,11 +58,11 @@
 
 % Résumé
 \begin{abstract}
-Ce document résume les instructions aux auteurs de la conférence JRES~2013.
-Il est téléchargeable sur le site des JRES : \url{http://www.jres.org}.
+Ce document résume les instructions aux auteurs de la conférence
+\href{http://www.jres.org}{JRES~2015}.
 
 Le résumé doit faire de quinze à vingt lignes. Il est écrit en italique,
-utilsant une police avec empattement en taille 10 points.
+utilisant une police avec empattement en taille 10 points.
 Le titre « Résumé » (ainsi que le titre « Mots-clefs » ci-dessous)
 sont en 14 points, gras, sans empattement.
 \end{abstract}
@@ -79,8 +79,6 @@ du PDF (\texttt{pdflatex}, \texttt{xelatex} ou \texttt{luatex}) et il est
 impératif d'utiliser le format « Portable Document Format » (.pdf) pour
 soumettre un article au comité de programme.
 
-Les auteurs doivent utiliser la classe de document « jres » téléchargeable
-sur le site des JRES (\url{https://2013.jres.org/modeles}).
 
 \section{Présentation générale}
 
@@ -160,16 +158,38 @@ figurera dans l'article.
 Pour les références à des pages web (sauf s'il s'agit d'une référence
 auquel cas elles doivent être placées dans la bibliographie), la macro
 \texttt{\char`\\url} sera utilisée, par exemple comme ceci :
-\url{http://2013.jres.org/}
+\url{http://www.jres.org/}
 
 \section{Mise en page}
 
-\subsection{Nombre de pages}
+\subsection{Puces et listes à numérotation}
 
-Pour les présentations courtes, l'article doit comprendre entre deux
-et huit pages ; pour les présentations longues, la taille de l'article
-doit être comprise entre six et huit pages. Dans le cas des posters,
-la taille doit être comprise entre une et huit pages, le poster étant
+Que ce soit pour les puces ou les listes à 
+numérotation, il est conseillé de n'utiliser que deux niveaux, en
+suivant les exemples ci-dessous :
+
+\begin{itemize}
+\item exemple de niveau 1 pour les puces;
+\begin{itemize}
+\item exemple de niveau 2 pour les puces;
+\end{itemize}
+\item deuxième exemple de niveau 1 pour les puces;
+\end{itemize}
+\begin{enumerate}
+\item exemple de niveau 1 pour les listes numérotées;
+\begin{enumerate}
+\item exemple de niveau 2 pour les listes numérotées;
+\item exemple de niveau 2 pour les listes numérotées second item;
+\end{enumerate}
+\item deuxième exemple de niveau 1 pour les listes numérotées.
+\end{enumerate}
+
+\subsection{Taille des articles}
+
+Pour les présentations courtes, l'article doit comprendre entre 5000
+et 25000 signes ; pour les présentations longues, la taille de l'article
+doit être comprise entre 15000 et 25000 signes. Dans le cas des posters,
+la taille doit être comprise entre 2500 et 25000 signes, le poster étant
 lui même inséré avec cet article.
 
 \subsection{Marges}
@@ -177,13 +197,9 @@ lui même inséré avec cet article.
 Les marges sont les suivantes :
 
 \begin{itemize}
-    \item en haut : 2\ cm ;
-    \item à gauche et à droite : 2\ cm ;
-    \item en bas : 2\ cm.
-	\begin{itemize}
-	    \item Liste à puce de second niveau
-	    \item 2e élément
-	\end{itemize}
+    \item en haut : 3\ cm ;
+    \item à gauche et à droite : 3\ cm ;
+    \item en bas : 3\ cm.
 \end{itemize}
 
 Les pages doivent être numérotées. Le pied de page du modèle doit être
@@ -198,7 +214,7 @@ figure~\ref{fig-exemple}.
 
 Le paquet \texttt{graphicx} est utilisé pour inclure des images.
 
-\begin{figure}
+\begin{figure}[hbtf]
     \centerline{\includegraphics[height=4cm]{figure}}
     \caption{Un exemple de figure}
     \label{fig-exemple}

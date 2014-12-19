@@ -1,4 +1,4 @@
-%% Copyright 2012 Renater
+%% Copyright 2012,2013,2014 Renater
 %
 % This work may be distributed and/or modified under the
 % conditions of the LaTeX Project Public License, either version 1.3
@@ -23,7 +23,7 @@
 %
 % Options
 \RequirePackage{kvoptions}
-\DeclareStringOption[2013]{year}
+\DeclareStringOption[2015]{year}
 \DeclareStringOption[Montpellier]{city}
 \ProcessKeyvalOptions*
 %
@@ -98,7 +98,7 @@
 \fi
 %
 % Papier A4 + Marges
-\RequirePackage[paper=a4paper,top=2cm,bottom=3cm,left=2cm,right=2cm]{geometry}
+\RequirePackage[paper=a4paper,top=3cm,bottom=4cm,left=3cm,right=3cm]{geometry}
 %
 % liste des auteurs
 \RequirePackage{datatool}
